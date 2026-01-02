@@ -587,7 +587,7 @@ for _, c in pairs(MovementPage:GetChildren()) do
 end
 
 -- Single scrolling frame for all movement options + player list
-local SCROLLBAR_WIDTH = 12 -- space for the scrollbar
+local SCROLLBAR_WIDTH = 18 -- space for the scrollbar
 
 local ScrollFrame = Instance.new("ScrollingFrame")
 ScrollFrame.Parent = MovementPage
