@@ -389,10 +389,10 @@ end
 --------------------------------------------------
 --// Aimbot Page
 --------------------------------------------------
--- Enable Aimbot
+-- Enable Aimbot Toggle
 local function AimbotCircleToggle(parent)
     local holder = Instance.new("Frame", parent)
-    holder.Size = UDim2.new(1,0,0,32) -- full width of page
+    holder.Size = UDim2.new(1,0,0,32)
     holder.BackgroundTransparency = 1
     holder.LayoutOrder = 1 -- ensures it's on top
 
@@ -422,7 +422,6 @@ local function AimbotCircleToggle(parent)
         btn.TextColor3 = _G.AimbotGUIEnabled and Color3.fromRGB(0,255,120) or Color3.fromRGB(200,200,200)
     end)
 end
-
 AimbotCircleToggle(AimbotPage)
 
 -- Aim Part Dropdown
@@ -430,6 +429,8 @@ local function AimPartDropdown(parent)
 	local holder = Instance.new("Frame", parent)
 	holder.Size = UDim2.new(1,0,0,32)
 	holder.BackgroundTransparency = 1
+	holder.LayoutOrder = 2 -- second element
+
 	local label = Instance.new("TextLabel", holder)
 	label.Size = UDim2.new(0.5,0,1,0)
 	label.BackgroundTransparency = 1
@@ -438,6 +439,7 @@ local function AimPartDropdown(parent)
 	label.TextSize = 13
 	label.TextColor3 = Color3.new(1,1,1)
 	label.TextXAlignment = Enum.TextXAlignment.Left
+
 	local dropdown = Instance.new("TextButton", holder)
 	dropdown.Size = UDim2.new(0.45,0,1,0)
 	dropdown.Position = UDim2.new(0.5,0,0,0)
@@ -486,6 +488,7 @@ local function SmoothnessSlider(parent)
 	local holder = Instance.new("Frame", parent)
 	holder.Size = UDim2.new(1,0,0,40)
 	holder.BackgroundTransparency = 1
+	holder.LayoutOrder = 3 -- third element
 	local label = Instance.new("TextLabel", holder)
 	label.Size = UDim2.new(0.6,0,1,0)
 	label.BackgroundTransparency = 1
@@ -533,6 +536,7 @@ local function KeybindButton(parent)
 	local holder = Instance.new("Frame", parent)
 	holder.Size = UDim2.new(1,0,0,32)
 	holder.BackgroundTransparency = 1
+	holder.LayoutOrder = 4 -- last element
 	local label = Instance.new("TextLabel", holder)
 	label.Size = UDim2.new(0.5,0,1,0)
 	label.BackgroundTransparency = 1
